@@ -15,7 +15,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type igDP:CellValuePresenter}">
-                        <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.Id)}"
+                        <Button Content="Cancel"
                                 IsEnabled="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.CanCancel)}"
                                 Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.CancelCommand)}" />
                     </ControlTemplate>
@@ -30,6 +30,9 @@
  
             <igDP:XamDataGrid.FieldLayouts>
                 <igDP:FieldLayout>
+                    <igDP:FieldLayout.Settings>
+                        <igDP:FieldLayoutSettings AutoGenerateFields="False" />
+                    </igDP:FieldLayout.Settings>
                     <igDP:FieldLayout.Fields>
                         <igDP:Field Name="CancelButton" BindingType="Unbound">
                             <igDP:Field.Settings>
