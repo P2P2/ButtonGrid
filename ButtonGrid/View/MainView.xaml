@@ -16,7 +16,8 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type igDP:CellValuePresenter}">
                         <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.Id)}"
-                                IsEnabled="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.CanCancel)}" />
+                                IsEnabled="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.CanCancel)}"
+                                Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Record.DataItem.(vm:OrderViewModel.CancelCommand)}" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

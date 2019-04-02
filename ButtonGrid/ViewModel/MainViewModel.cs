@@ -35,8 +35,9 @@ namespace ButtonGrid.ViewModel
             _manager = new Manager(o => _orders.AddOrder(o));
 
             _orders.AddOrder(new Order(123, "Sell", 12400));
-            _orders.AddOrder(new Order(123, "Sell", 0));
-            //_manager.Start();
+            _orders.AddOrder(new Order(124, "Sell", 0));
+
+            _manager.Start();
         }
 
 
